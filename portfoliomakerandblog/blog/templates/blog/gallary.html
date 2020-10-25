@@ -1,0 +1,33 @@
+{% include 'portfolio/base.html'%}
+<h1>Utkarsh's Portfolio</h1>
+
+{%load static%}
+{% block content%}
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+
+    <div class="row">
+        {% for im in imga %}
+        <div class="col-lg-4 col-md-6">
+      
+          
+    
+            <div class="col-lg-4 col-xs-6 thumbnail"><img class="mar"src="{{im.image}}" alt="image not found"></div>
+            
+            <div class="col-lg-4 col-xs-6 thumbnail"><img class="mar"src="{{im.image}}" alt="image not found"></div>
+            {% endfor %}
+
+
+{%endblock%}
+    
+</body>
+</html>

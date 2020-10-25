@@ -1,0 +1,85 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="{% static 'portfolio/bootstrap/css/bootstrap.min.css' %}">
+
+  
+
+  
+
+  <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
+
+  <link rel="icon" type="image/png" href="{% static 'portfolio/download.jfif' %}">
+  <title>Utkarsh Gupta</title>
+</head>
+<style type="text/css">
+  body {
+   margin: 15px;
+  }
+  /*
+   * this is the same as writing
+   * body { margin-top: 0px; margin-right: 0px; margin-bottom: 0px; margin-left: 0px;}
+   * I'm adding px here for clarity sake but the unit is not really needed if you have 0
+   * look into em, pt and % for other unit types 
+   * the rules are always clockwise: top, right, bottom, left
+  */
+</style>
+<body style="margin: 15;">
+  <nav class="navbar navbar-white bg-white" style="
+  display: flex;
+">
+  <a class="navbar-brand" href="{% url 'home' %}">
+      <img src="{% static 'portfolio/download.jfif' %}"width="30" height="30" class="d-inline-block align-top" alt="Utkarsh-gupta Logo">
+      <span><b style="
+        font-family: math;
+    ">Utkarsh Gupta</b></span>
+    </a>
+  
+    <ul class="nav justify-content-end" style="
+    font-family: math;
+">
+      <li class="nav-item">
+        <a class="nav-link" href="{% static 'portfolio/resume.pdf' %}"><h5><b>Resume</b></h5>
+        </a>
+      </li>
+        
+      <li class="nav-item">
+          <a class="nav-link" href="https://www.linkedin.com/in/utkarsh-gupta-36183514b/"><h5><b>Linkedin</b></h5>
+          </a>
+      </li>
+
+      <li class="nav-item">
+          <a class="nav-link" href="{% url 'project' %}"><h5><b>Django Project</b></h5>
+          </a>
+      </li>
+
+
+      <li class="nav-item">
+        <a class="nav-link" href="{% url 'blog:all_blogs' %}"><h5><b>Blog</b></h5>
+        </a>
+      </li>
+
+
+    </ul>
+    
+  </nav>
+
+  <div class="container">
+    {% block content %}{% endblock %}
+  </div>
+
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  
+</body>
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+</html>
