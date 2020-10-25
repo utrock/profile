@@ -25,7 +25,7 @@ SECRET_KEY = 'g3qn49l*8%-$vyl!4nr8qi9fi*j%+t^kxjkv6p8(-a^v=0@h6d'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['utrocks.pythonanywhere.com' ]
 
 
 # Application definition
